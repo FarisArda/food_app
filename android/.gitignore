@@ -1,0 +1,37 @@
+gradle-wrapper.jar
+/.gradle
+/captures/
+/gradlew
+/gradlew.bat
+/local.properties
+GeneratedPluginRegistrant.java
+
+# Remember to never publicly share your keystore.
+# See https://flutter.dev/docs/deployment/android#reference-the-keystore-from-the-app
+key.properties
+**/*.keystore
+**/*.jks
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        floatingActionButton: MyActionButton(),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        bottomNavigationBar: MyAppbar(),
+        body: Container(
+          child: ListView(
+            children: <Widget>[
+              SizedBox(height: 16.0),
+              MyAppBar(),
+              SizedBox(height: 16.0),
+              FoodListview(),
+              SizedBox(height: 16.0),
+              SelectTypeSection(),
+              SizedBox(height: 16.0),
+              MenuItemsList()
+            ],
+          ),
+        ));
+  }
+}
